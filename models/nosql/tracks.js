@@ -1,5 +1,6 @@
 const mongoose = require("mongoose")
-const TracksScheme = new mongoose.Schema({
+const TracksScheme = new mongoose.Schema(
+{
     name: {
         type: String,
     },
@@ -10,7 +11,8 @@ const TracksScheme = new mongoose.Schema({
         type: String,
 
         validate: {
-            validator: (req) => { return true; }
+            validator: (req) => {
+                return true; }
         },
         message: "Error_URL",
     },
@@ -38,8 +40,8 @@ const TracksScheme = new mongoose.Schema({
     },
 }, 
 {
-    timestamps: true,
     versionkey: false,
+    timestamps: true,
 }
 );
-module.exports = mongoose.model("tracks", TracksScheme);
+module.exports = mongoose.model("tracks", TracksScheme)
