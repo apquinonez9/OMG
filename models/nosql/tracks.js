@@ -44,4 +44,4 @@ const TracksScheme = new mongoose.Schema(
     timestamps: true,
 }
 );
-module.exports = mongoose.model("tracks", TracksScheme)
+module.exports = mongoose.model("tracks", TracksScheme);

@@ -1,25 +1,26 @@
-const {tracksModel} = require("../models");
-
+const { tracksModel } = require('../models');
 /***
- * Obtener lista de la base de datos!
+ * Obtener lista de datos
  * @param { * }req
  * @param { * }res
-*/
+ */
 const getItems = async(req, res) => {
-    const data = await tracksModel.find({});
+    const data = await tracksModel.find({});;
     res.send({data});
 };
+
+
 /***
- * Obtener un detalle!
+ * Obtener un detalle
  * @param { * }req
  * @param { * }res
-*/
-const getItem=async(req, res)=>{};
+ */
+const getItem = (req, res) => {};
 /***
- * insertar un registro!
+ * insertar registro
  * @param { * }req
  * @param { * }res
-*/
+ */
 const createItems=async(req, res)=>{
     const {body} = req
   console.log(body)
@@ -28,16 +29,15 @@ const createItems=async(req, res)=>{
   res.send({data})
 };
 /***
- * actualizar un regitro!
+ * actualizar registros
  * @param { * }req
  * @param { * }res
-*/
-const updateItems=(req, res)=>{};
+ */
+const updateItems = (req, res) => {};
 /***
- * eliminar un registro!
+ *eliminar registros
  * @param { * }req
  * @param { * }res
-*/
-const deleteItems=(req, res)=>{};
-
-module.exports={getItems,getItem,createItems,updateItems,deleteItems}
+ */
+const deleteItems = (req, res) => {};
+module.exports = { getItems, getItem, createItems, updateItems, deleteItems };
